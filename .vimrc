@@ -24,7 +24,7 @@ set nocompatible
 set mouse=a
 syntax on
 set t_Co=256
-"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 colorscheme molokai
 set laststatus=2
 set autoindent
