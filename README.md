@@ -3,6 +3,8 @@ nest4vim
 
 Where vim lives
 
-Clone
-. install.sh
-start vim -> BundleInstall
+
+1. Clone
+* . install.sh
+* install powerline compatible fonts
+* start vim -> BundleInstall
