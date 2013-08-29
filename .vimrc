@@ -40,7 +40,8 @@ set grepprg=grep\ -nH\ $*
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "set guifont=Terminus\ 14
-set guifont=Inconsolata\ for\ Powerline\ 14
+"set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 14
+
 let g:tex_flavor='latex'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
