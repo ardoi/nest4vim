@@ -66,6 +66,10 @@ map Q gq
 "ignore latex crap
 let NERDTreeIgnore=['\.log$', '\.lot$', '\.aux$','\.pdf$','\.toc$','\.bbl$','\.out$','\.pyc$']
 "let g:ctrlp_custom_ignore = 'log'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$|\.pyc$'
+  \ }
     
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.
