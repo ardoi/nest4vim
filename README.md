@@ -1,7 +1,7 @@
 nest4vim
 ========
 
-Where vim lives
+Where vim lives.
 
 
 1. Clone
