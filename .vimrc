@@ -13,6 +13,7 @@ Bundle 'Lokaltog/powerline'
 Bundle 'klen/python-mode.git'
 Bundle 'tpope/vim-sensible.git'
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'plasticboy/vim-markdown'
 
 filetype plugin indent on
 " Disable python folding
@@ -40,7 +41,7 @@ set grepprg=grep\ -nH\ $*
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "set guifont=Terminus\ 14
-"set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 14
+set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
 
 let g:tex_flavor='latex'
 let g:ctrlp_map = '<c-p>'
