@@ -71,9 +71,11 @@ let NERDTreeIgnore=['\.log$', '\.lot$', '\.aux$','\.pdf$','\.toc$','\.bbl$','\.o
 "let g:ctrlp_custom_ignore = 'log'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
-  \ 'file': '\v\.(exe|so|dat|pyc)$'
+  \ 'file': '\v\.(exe|so|dat|pyc|pyc\.orig|py\.orig|png)$'
   \ }
-    
+
+let g:ctrlp_working_path_mode = 'r' 
+let g:ctrlp_max_history = 0
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.
 "vnoremap p "_dp
