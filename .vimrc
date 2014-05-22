@@ -13,9 +13,11 @@ Bundle 'Lokaltog/powerline'
 Bundle 'klen/python-mode.git'
 Bundle 'tpope/vim-sensible.git'
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'tpope/vim-markdown.git'
 
 filetype plugin indent on
 " Disable python folding
+let g:pymode = 1
 let g:pymode_folding = 0
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -45,9 +47,10 @@ set backspace=indent,eol,start
 let g:tex_flavor='latex'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:pymode_rope_autocomplete_map = '<A-Space>'
-let g:pymode_lint_onfly = 1
-let g:pymode_lint_checker = "pyflakes"
+"let g:pymode_rope_autocomplete_map = '<A-Space>'
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_checkers = ['pyflakes']
 "pyflakes, pep8, mccabe, pylint, pep257
 "
 "autocmd! bufwritepost .vimrc source %
