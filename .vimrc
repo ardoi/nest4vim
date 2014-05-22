@@ -71,7 +71,7 @@ let NERDTreeIgnore=['\.log$', '\.lot$', '\.aux$','\.pdf$','\.toc$','\.bbl$','\.o
 "let g:ctrlp_custom_ignore = 'log'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$|\.pyc$'
+  \ 'file': '\v\.(exe|so|dat|pyc)$'
   \ }
     
 " This is an alternative that also works in block mode, but the deleted
