@@ -1,7 +1,8 @@
 
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
  
 
 " let Vundle manage Vundle
@@ -13,15 +14,16 @@ Bundle 'Lokaltog/powerline'
 Bundle 'klen/python-mode.git'
 Bundle 'tpope/vim-sensible.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-markdown.git'
 
+call vundle#end()
 filetype plugin indent on
 " Disable python folding
+let g:pymode = 1
 let g:pymode_folding = 0
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 "
-set nocompatible
 set mouse=a
 syntax on
 set t_Co=256
@@ -46,9 +48,10 @@ set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 12
 let g:tex_flavor='latex'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:pymode_rope_autocomplete_map = '<A-Space>'
-let g:pymode_lint_onfly = 1
-let g:pymode_lint_checker = "pyflakes"
+"let g:pymode_rope_autocomplete_map = '<A-Space>'
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_checkers = ['pyflakes']
 "pyflakes, pep8, mccabe, pylint, pep257
 "
 "autocmd! bufwritepost .vimrc source %
@@ -69,9 +72,11 @@ let NERDTreeIgnore=['\.log$', '\.lot$', '\.aux$','\.pdf$','\.toc$','\.bbl$','\.o
 "let g:ctrlp_custom_ignore = 'log'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$|\.pyc$'
+  \ 'file': '\v\.(exe|so|dat|pyc|pyc\.orig|py\.orig|png)$'
   \ }
-    
+
+let g:ctrlp_working_path_mode = 'r' 
+let g:ctrlp_max_history = 0
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.
 "vnoremap p "_dp
